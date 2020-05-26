@@ -1,17 +1,16 @@
 import React from 'react';
 import Routes from './routes/index.js'
-//import background from './assets/imgs/background.png'
+import './App.css'
+import logo from './assets/reator-arc.png'
 
-import { GlobalStyle } from './styles/global.js';
-import { Container } from './styles/pagecontainer'
-
-
-const App = () => {
+function App() {
   return (
-    <Container>
-      <GlobalStyle/>
-      <Routes/>
-    </Container>
+    <div className="container">
+      <img src={logo} alt="Logo" />
+      <div className="content">
+        <Routes />
+      </div>
+    </div>
   )
 }
 

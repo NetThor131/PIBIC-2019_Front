@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken } from "./auth";
 
 const api = axios.create({
-  baseURL: "http://victortirano.pythonanywhere.com/",
+  baseURL: "https://victortirano.pythonanywhere.com/",
 });
 
 api.interceptors.request.use(async config => {
