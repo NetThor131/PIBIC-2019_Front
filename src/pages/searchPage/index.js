@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./styles.css"
 import api from "../../services/api"
-import Response from '../responsePage/index'
 
 export default class searchPage extends Component {
 
@@ -25,7 +24,10 @@ export default class searchPage extends Component {
             .catch((err) => {
                 console.log(err);
             });
-        this.setState({ response: response });
+        this.props.history.push({
+            pathname: '/res',
+            state: { detail: response }
+        })
         console.log(response);
     }
 

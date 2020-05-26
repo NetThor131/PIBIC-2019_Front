@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import "./styles.css"
-import { Link } from "react-router-dom";
 
 export default class responsePage extends Component {
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.history.push({
+            pathname: '/',
+        })
+    }
 
     render() {
         return (
             <>
-                <textarea value={this.props.resposta}/>
-                <button>
-                    <Link to="/">Voltar</Link>
-                </button>
+                <form onSubmit={this.handleSubmit}>
+                    <textarea value={this.props.location.state.detail} />
+                    <button>Voltar
+                    </button>
+                </form>
             </>
         )
     }
