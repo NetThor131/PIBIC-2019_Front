@@ -14,9 +14,8 @@ export default class responsePage extends Component {
         return (
             <>
                 <form onSubmit={this.handleSubmit}>
-                    <textarea value={this.props.location.state.detail} />
-                    <button>Voltar
-                    </button>
+                    <textarea id="textarea" value={this.props.location.state.detail} />
+                    <button>Voltar</button>
                 </form>
             </>
         )

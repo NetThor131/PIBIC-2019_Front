@@ -41,11 +41,11 @@ export default class searchPage extends Component {
             <>
                 <form
                     onSubmit={this.handleSubmit}>
-                        <textarea
-                            name="errorMsg"
-                            placeholder="Cole seu código aqui"
-                            onChange={this.handleChange}
-                        />
+                    <textarea
+                        name="errorMsg"
+                        placeholder="Cole seu código aqui"
+                        onChange={this.handleChange}
+                    />
                     <select
                         name="extension"
                         placeholder="Selecione a linguagem"
@@ -57,7 +57,7 @@ export default class searchPage extends Component {
                         <option value=".java">Java</option>
                         <option value=".c">C</option>
                         <option value=".cpp">C++</option>
-                        <option value=".python">Python</option>
+                        <option value=".py">Python</option>
                     </select>
                     <button type="submit">Traduzir</button>
                 </form>
