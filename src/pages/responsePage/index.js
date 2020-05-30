@@ -15,7 +15,7 @@ export default class responsePage extends Component {
             <>
                 <form onSubmit={this.handleSubmit}>
                     <textarea id="textarea" value={this.props.location.state.detail} />
-                    <button>Voltar</button>
+                    <button className="button" >Voltar</button>
                 </form>
             </>
         )

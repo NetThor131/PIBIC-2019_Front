@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
-body, textarea, button {
+body, textarea, .button {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -78,7 +78,7 @@ body, textarea, button {
   font-size: 16px;
 }
 
-.content button {
+.content .button {
   border: 0;
   border-radius: 2px;
   width: 100%;
@@ -91,6 +91,6 @@ body, textarea, button {
   cursor: pointer;
 }
 
-.content button:hover {
+.content .button:hover {
   background: #e14f50;
 }

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import "./styles.css"
 import api from "../../services/api"
 
+import java from "../../assets/linguagens/java.png"
+import cpp from "../../assets/linguagens/c++.png"
+import python from "../../assets/linguagens/python.png"
+import c from "../../assets/linguagens/c.png"
+
 export default class searchPage extends Component {
 
     state = {
@@ -46,20 +51,41 @@ export default class searchPage extends Component {
                         placeholder="Cole seu código aqui"
                         onChange={this.handleChange}
                     />
-                    <select
-                        name="extension"
-                        placeholder="Selecione a linguagem"
-                        onChange={e => this.setState({
-                            extension: e.target.value
-                        })}
-                    >
-                        <option selected>Selecione a linguagem</option>
-                        <option value=".java">Java</option>
-                        <option value=".c">C</option>
-                        <option value=".cpp">C++</option>
-                        <option value=".py">Python</option>
-                    </select>
-                    <button type="submit">Traduzir</button>
+                    <div className="select">
+                        <div
+                            className="click" 
+                            onClick={e => this.setState({
+                                extension: ".java"
+                            })}
+                        >
+                            <img className="image-click" src={java} alt="java" />
+                        </div>
+                        <div
+                            className="click" 
+                            onClick={e => this.setState({
+                                extension: ".c"
+                            })}
+                        >
+                            <img className="image-click" src={c} alt="c" />
+                        </div>
+                        <div 
+                            className="click" 
+                            onClick={e => this.setState({
+                                extension: ".cpp"
+                            })}
+                        >
+                            <img className="image-click" src={cpp} alt="cpp" />
+                        </div>
+                        <div
+                            className="click" 
+                            onClick={e => this.setState({
+                                extension: ".py"
+                            })}
+                        >
+                            <img className="image-click" src={python} alt="python" />
+                        </div>
+                    </div>
+                    <button className="button" type="submit">Traduzir</button>
                 </form>
             </>
         )
