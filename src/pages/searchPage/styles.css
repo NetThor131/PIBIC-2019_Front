@@ -19,11 +19,12 @@ img {
   border-radius: 2px;
   padding: 0 15px;
   font-size: 16px;
+  width: 50%;
 }
 
 .image-click {
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 50px;
+  max-height: 50px;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -35,7 +36,7 @@ img {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 10px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -43,8 +44,9 @@ nav {
 
 .menu {
   list-style: none;
-  border: 1px solid hsl(0, 0%, 75%);
+  border: 1px solid #dddddd;
   float: left;
+  height: 30px;
 }
 
 .menu li {

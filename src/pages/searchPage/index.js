@@ -64,10 +64,44 @@ export default class searchPage extends Component {
                         <textarea placeholder=">" value={this.state.response} />
                     </div>
                     <nav>
+                        <div className="select">
+                            <div
+                                className="click"
+                                onClick={e => this.setState({
+                                    extension: ".java"
+                                })}
+                            >
+                                <img className="image-click" src={java} alt="java" />
+                            </div>
+                            <div
+                                className="click"
+                                onClick={e => this.setState({
+                                    extension: ".c"
+                                })}
+                            >
+                                <img className="image-click" src={c} alt="c" />
+                            </div>
+                            <div
+                                className="click"
+                                onClick={e => this.setState({
+                                    extension: ".cpp"
+                                })}
+                            >
+                                <img className="image-click" src={cpp} alt="cpp" />
+                            </div>
+                            <div
+                                className="click"
+                                onClick={e => this.setState({
+                                    extension: ".py"
+                                })}
+                            >
+                                <img className="image-click" src={python} alt="python" />
+                            </div>
+                        </div>
                         <ul className="menu">
                             <li><a href="#">Links de ajuda</a>
                                 <ul>
-                                    <li>
+                                    <li> 
                                         {this.state.links.map(links => (
                                             <a href={links}>{links}</a>
                                         ))}
@@ -76,40 +110,7 @@ export default class searchPage extends Component {
                             </li>
                         </ul>
                     </nav>
-                    <div className="select">
-                        <div
-                            className="click"
-                            onClick={e => this.setState({
-                                extension: ".java"
-                            })}
-                        >
-                            <img className="image-click" src={java} alt="java" />
-                        </div>
-                        <div
-                            className="click"
-                            onClick={e => this.setState({
-                                extension: ".c"
-                            })}
-                        >
-                            <img className="image-click" src={c} alt="c" />
-                        </div>
-                        <div
-                            className="click"
-                            onClick={e => this.setState({
-                                extension: ".cpp"
-                            })}
-                        >
-                            <img className="image-click" src={cpp} alt="cpp" />
-                        </div>
-                        <div
-                            className="click"
-                            onClick={e => this.setState({
-                                extension: ".py"
-                            })}
-                        >
-                            <img className="image-click" src={python} alt="python" />
-                        </div>
-                    </div>
+
                     <button className="button" type="submit">Traduzir</button>
                 </form>
             </>
