@@ -64,7 +64,7 @@ h1, h2 {
 }
 
 .content form textarea {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #dddddd;
   border-radius: 2px;
   width:100%;
@@ -75,7 +75,7 @@ h1, h2 {
 }
 
 .content form select {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #dddddd;
   border-radius: 2px;
   width: 60%;
