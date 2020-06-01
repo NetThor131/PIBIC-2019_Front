@@ -7,7 +7,8 @@ import logo from './assets/reator-arc.png'
 function App() {
   return (
     <div className="container">
-      <img src={logo} alt="Logo" />
+      <h1>EME</h1>
+      <h2>Explain My Error</h2>
       <div className="content">
         <Routes />
       </div>

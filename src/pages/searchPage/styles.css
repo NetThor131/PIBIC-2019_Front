@@ -5,6 +5,11 @@ img {
   height: auto;
 }
 
+.textarea {
+  display: flex;
+  justify-content: space-around;
+}
+
 .select {
   display: flex;
   justify-content: space-around;
@@ -20,4 +25,8 @@ img {
   width: auto;
   height: auto;
   cursor: pointer;
+}
+
+.image-click:hover {
+  border: 1px solid #dddddd;
 }
