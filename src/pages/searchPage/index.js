@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import "./styles.css"
 import api from "../../services/api"
-import Select from 'react-select'
 
 import java from "../../assets/linguagens/java.png"
 import cpp from "../../assets/linguagens/c++.png"
 import python from "../../assets/linguagens/python.png"
 import c from "../../assets/linguagens/c.png"
-
-const options = [
-    { value: '.java', label: 'Java' },
-    { value: '.c', label: 'C' },
-    { value: '.cpp', label: 'C++' },
-    { value: '.py', label: 'Python' }
-]
 
 export default class searchPage extends Component {
     state = {
@@ -34,15 +26,16 @@ export default class searchPage extends Component {
             })
             .then(function (res) {
                 response = res.data.data[0].eme_msg;
-                links = res.data.data[0].stackoverflow_links;
-                console.log(res.data.data[0].stackoverflow_links);
-                console.log(res.data.data[0].eme_msg);
+                links = res.data.data[0].help_links;
+                console.log(res.data.data);
+                console.log(links);
             })
             .catch((err) => {
                 console.log(err);
             });
         this.setState({ response: response });
-        this.setState({ links: links });
+        if (links !== '') { this.setState({ links: links }) };
+        console.log(this.state.links);
     }
 
     handleChange = e => {
@@ -101,10 +94,11 @@ export default class searchPage extends Component {
                         <ul className="menu">
                             <li><a href="#">Links de ajuda</a>
                                 <ul>
-                                    <li> 
+                                    <li>
                                         {this.state.links.map(links => (
-                                            <a href={links}>{links}</a>
-                                        ))}
+                                            <a href={links} target="_blank" >{links}</a>
+                                        ))
+                                        }
                                     </li>
                                 </ul>
                             </li>
