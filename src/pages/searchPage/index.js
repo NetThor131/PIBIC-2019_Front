@@ -64,7 +64,7 @@ export default class searchPage extends Component {
                                     extension: ".java"
                                 })}
                             >
-                                <img className="image-click" src={java} alt="java" />
+                                <img className={this.state.extension === ".java" ? "image-click-selected" : "image-click"} src={java} alt="java" />
                             </div>
                             <div
                                 className="click"
@@ -72,7 +72,7 @@ export default class searchPage extends Component {
                                     extension: ".c"
                                 })}
                             >
-                                <img className="image-click" src={c} alt="c" />
+                                <img className={this.state.extension === ".c" ? "image-click-selected" : "image-click"} src={c} alt="c" />
                             </div>
                             <div
                                 className="click"
@@ -80,7 +80,7 @@ export default class searchPage extends Component {
                                     extension: ".cpp"
                                 })}
                             >
-                                <img className="image-click" src={cpp} alt="cpp" />
+                                <img className={this.state.extension === ".cpp" ? "image-click-selected" : "image-click"} src={cpp} alt="cpp" />
                             </div>
                             <div
                                 className="click"
@@ -88,7 +88,7 @@ export default class searchPage extends Component {
                                     extension: ".py"
                                 })}
                             >
-                                <img className="image-click" src={python} alt="python" />
+                                <img className={this.state.extension === ".py" ? "image-click-selected" : "image-click"} src={python} alt="python" />
                             </div>
                         </div>
                         <ul className="menu">

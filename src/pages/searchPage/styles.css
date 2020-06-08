@@ -34,6 +34,15 @@ img {
   border: 1px solid #dddddd;
 }
 
+.image-click-selected{
+  border: 1px solid #dddddd;
+  max-width: 50px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
