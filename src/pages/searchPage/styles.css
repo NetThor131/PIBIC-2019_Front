@@ -31,11 +31,11 @@ img {
 }
 
 .image-click:hover {
-  border: 1px solid #dddddd;
+  border: 2px solid #f05a5b;
 }
 
 .image-click-selected{
-  border: 1px solid #dddddd;
+  border: 2px solid #f05a5b;
   max-width: 50px;
   max-height: 50px;
   width: auto;
