@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./styles.css"
 import api from "../../services/api"
 
+
 import java from "../../assets/linguagens/java.png"
 import cpp from "../../assets/linguagens/c++.png"
 import python from "../../assets/linguagens/python.png"
@@ -15,7 +16,7 @@ export default class searchPage extends Component {
         links: []
     }
 
-    handleSubmit = async e => {
+    handleSubmit = async e=> {
         e.preventDefault();
         var response;
         var links;
